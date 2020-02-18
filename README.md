@@ -16,11 +16,11 @@ using it's own twilio phone number.
 
 
 ### Interacting with the bot, adding a number, and sending a text
-![Creating Number](/Censored1.png)
+![Creating Number](/Censored1.png)  
 
 ### Getting a text and sending a reply
-![Texts](/FirstTexts.jpg)
+![Texts](/FirstTexts.jpg)  
 
 ### Interactions with other users
-![Additional Interactions 1](/Censored2.png)
-![Additional Interactions 2](/Censored4.png)
+![Additional Interactions 1](/Censored2.png)  
+![Additional Interactions 2](/Censored4.jpg)
