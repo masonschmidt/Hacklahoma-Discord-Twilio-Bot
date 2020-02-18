@@ -7,12 +7,12 @@ import pickle
 from twilio.rest import Client
 import os
 
-account_sid = 'ACf00185389bcca9a08a1054ae2fb8b0aa'
-auth_token = '762c895aa5a06f146170800567241c9d'
+account_sid = 'XXXXXXX'
+auth_token = 'XXXXXXX'
 twilioClient = Client(account_sid, auth_token)
 
 BOT_PREFIX = ("?", "!")
-TOKEN = "NTQzODQ3MjY4MzYxNTY4MjU3.D0ClbQ.Y21LMtlJcLnsjjWLoM6eB85ql_I"  # Get at discordapp.com/developers/applications/me
+TOKEN = "XXXXXX"  # Get at discordapp.com/developers/applications/me
 User_Number = namedtuple('User_Number', ['user_id', 'user_name', 'number', 'last_received_message', 'received_message'])
 Message_Info = namedtuple('Message_Info', ['message', 'number', 'message_present'])
 user_numbers = []
@@ -42,7 +42,7 @@ async def text(context, username, messageToSend):
         messageTwilio = twilioClient.messages \
         .create(
         body="Discord message from " + context.message.author.name + ": " + messageToSend + "\nText back to send reply",
-        from_='+12562911218',
+        from_='XXXXXXX',
         to=target_user.number)
         await discord_client.send_message(context.message.channel, "Thank you " + context.message.author.mention + ". Your message has been sent")
         updateUser(User_Number(target_user.user_id, target_user.user_name, target_user.number, context.message.channel.id, True))
@@ -109,7 +109,7 @@ async def check_messages():
     while not discord_client.is_closed:
         print("Checking for messages:")
         found_message = False
-        with open('C:\\Users\\mason\\Dropbox\\Hacklahoma\\Twilio\\Info', 'rb') as file:
+        with open('XXXXXXX', 'rb') as file:
             info = pickle.load(file)
             if info.message_present:
                 print("Message Found")
@@ -119,7 +119,7 @@ async def check_messages():
                 found_message = True
 
         if found_message:
-            with open('C:\\Users\\mason\\Dropbox\\Hacklahoma\\Twilio\\Info', 'wb') as file:
+            with open('XXXXXXXX', 'wb') as file:
                 new_info = Message_Info('', '', False)
                 pickle.dump(new_info, file)
         else:
